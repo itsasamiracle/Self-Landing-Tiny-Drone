@@ -14,3 +14,5 @@ Wiring diagram:
 
 
 The code sets up a WiFi server using the ESP32. We remotely connect to the server using an HTML website to control the drone. This currently needs a ton of testing and calibration.
+
+I made this project because it integrates many different aspects of engineering like CAD and sensor usage for a cool project. I also just thought it would be cool to make a drone.
