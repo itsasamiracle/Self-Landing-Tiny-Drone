@@ -12,3 +12,5 @@ Uses time of flight sensor screwed to the bottom face to give drone auto-landing
 Wiring diagram:
 <img width="1144" height="710" alt="image" src="https://github.com/user-attachments/assets/3a793beb-1620-4680-b793-dc97124cd59d" />
 
+
+The code sets up a WiFi server using the ESP32. We remotely connect to the server using an HTML website to control the drone. This currently needs a ton of testing and calibration.
