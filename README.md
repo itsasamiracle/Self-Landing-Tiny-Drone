@@ -3,7 +3,8 @@ Open source project for nasa hackclub stardance organization. Contains design fi
 
 This project is a tiny drone that will be able to land itself by gradually descending as it approaches the ground. The drone detects the ground using a time-of-flight sensor mounted to the bottom that communicates to an onboard ESP32 C3 supermini. An onboard gyro/accelerometer will also stabilize the drone and regulate landings.
 
-<img width="1194" height="766" alt="image" src="https://github.com/user-attachments/assets/51469f9c-f621-4ab0-98a3-6e788fb55a7d" />
+<img width="1144" height="675" alt="image" src="https://github.com/user-attachments/assets/8959dcc5-a1a1-4cb5-a308-ba4c2021f4c5" />
+
 
 
 Wiring diagram:
