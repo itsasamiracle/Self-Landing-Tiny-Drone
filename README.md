@@ -1,12 +1,9 @@
 # Self-Landing-Tiny-Drone
 Open source project for nasa hackclub stardance organization. Contains design files for a tiny drone with self-landing capabilites.
 
+This project is a tiny drone that will be able to land itself by gradually descending as it approaches the ground. The drone detects the ground using a time-of-flight sensor mounted to the bottom that communicates to an onboard ESP32 C3 supermini. An onboard gyro/accelerometer will also stabilize the drone and regulate landings.
+
 <img width="1194" height="766" alt="image" src="https://github.com/user-attachments/assets/51469f9c-f621-4ab0-98a3-6e788fb55a7d" />
-
-Uses esp32 c3 supermini as microcontroller
-
-Uses time of flight sensor screwed to the bottom face to give drone auto-landing capabilities.
-
 
 
 Wiring diagram:
