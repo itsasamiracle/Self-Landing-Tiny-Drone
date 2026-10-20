@@ -1,5 +1,12 @@
 #include <Arduino.h>
 #include "WiFi.h"
+#include <Wire.h>
+#include <Adafruit_MPU6050.h>
+#include <Adafruit_VL53L0X.h>
+
+Adafruit_MPU6050 mpu;
+Adafruit_VL53L0X lox;
+
 
 
 const char* ssid = "Samir's iPhone";
@@ -161,6 +168,37 @@ void setup() {
 
   server.begin();
 
+  Wire.begin(6,7);
+  Wire.setClock(100000);
+  
+  if (!mpu.begin()) {
+    
+    while (1)
+    {
+      Serial.println("accelerogyro not found");
+    delay(10);
+  
+  }
+  }
+  //need to calibrate mpu
+  mpu.setAccelerometerRange(MPU6050_RANGE_8_G);
+  mpu.setGyroRange(MPU6050_RANGE_500_DEG);
+  mpu.setFilterBandwidth(MPU6050_BAND_21_HZ);
+
+  if (!lox.begin()) {
+    while (1)
+
+    {Serial.println("TOF not found");
+    delay(1000);
+    }
+    
+
+  }
+
+
+
+
+
 }
 
 void loop() {
@@ -193,6 +231,16 @@ void loop() {
     }
     client.stop();
   }
+
+  sensors_event_t a, g, temp;
+  mpu.getEvent(&a, &g, &temp);
+
+  VL53L0X_RangingMeasurementData_t range;
+  lox.rangingTest(&range, false);
+
+  Serial.printf("Accel: %")
+
+
 }
 
 // put function definitions here:
@@ -213,5 +261,4 @@ void HoverMode() {
 
 
 }
-
 
